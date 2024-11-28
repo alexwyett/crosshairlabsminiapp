@@ -9,14 +9,14 @@ export default function SyncWalletAddress() {
   const walletAddress = useTonAddress(false);
   const { state, open } = useTonConnectModal();
   const ctx = useContext(TonConnectUIContext);
-
+  
   const HandleSubmit = async () => {
     if (ctx?.connected && user.wallet) {
       await ctx.disconnect();
       return;
     }
 
-    if (state?.status === 'closed') {
+    if (state?.status === 'closed' && !walletAddress) {
       open();
 
       return;
@@ -38,7 +38,7 @@ export default function SyncWalletAddress() {
 
   return (
     <>
-      <p>Connect your wallet to be eligible for raffle prizes!</p>
+      <p>Connect your wallet to be eligible for prizes!</p>
       {user.wallet && <div className="p-2 text-wrap rounded bg-gray-500 break-words">{user.wallet}</div>}
       <PromiseForm 
         onSubmit={HandleSubmit}
