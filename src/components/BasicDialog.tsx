@@ -1,8 +1,7 @@
-import Portal from "./Portal";
+import { PropsWithChildren, useEffect } from "react";
 import { XCircleIcon } from "@heroicons/react/24/solid";
 import clsx from "clsx";
-import { PropsWithChildren, useEffect } from "react";
-import H2 from "./H2";
+import Portal from "./Portal";
 
 export default function BasicDialog({ open, onClose, children, title }: { open: boolean, onClose?: Function, title?: string } & PropsWithChildren) {
 	useEffect(() => {
@@ -33,7 +32,7 @@ export default function BasicDialog({ open, onClose, children, title }: { open: 
         <header
           className="h-20 w-full flex p-4 items-center"
         >
-          {title && <H2>{title}</H2>}
+          {title && <h2>{title}</h2>}
           {onClose && <button
             className="mr-0 ml-auto h-12 w-12"
             onClick={(e) => {
