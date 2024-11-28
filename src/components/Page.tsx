@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import HomePage from "./Pages/Home";
 import { PusherProvider } from "@/context/PusherProvider";
-import { pusherKey } from "@/lib/constants";
+import { BASE_URL, pusherKey } from "@/lib/constants";
 import PusherEvents from "./PusherEvents";
 import Wallet from "./Pages/Wallet";
 import UserProvider from "@/context/User";
@@ -14,7 +14,7 @@ import Share from "./Pages/Share";
 
 export default function Page() {
   return (
-    <TonConnectUIProvider manifestUrl={`/tonconnect-manifest.json`}>
+    <TonConnectUIProvider manifestUrl={`${BASE_URL}tonconnect-manifest.json`}>
       <div id="app" className="bg-[#0C0C0C] text-white">
         <UserProvider>
           <PusherProvider
