@@ -25,9 +25,9 @@ export default function LocaleSwitcherSelect({
   }
 
   return (
-    <div className="relative">
-      {label}
-      <select className='text-black' defaultValue={defaultValue} onChange={onChange} disabled={isPending}>
+    <div className="relative flex flex-col gap-4">
+      <label>{label}</label>
+      <select className='text-black p-2 rounded' defaultValue={defaultValue} onChange={onChange} disabled={isPending}>
         {items.map((item) => (
           <option
             key={item.value}

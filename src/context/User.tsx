@@ -3,7 +3,7 @@ import { UserPayload, UserState } from "../lib/types";
 import UserReducer from "./UserReducer";
 
 export const InitialState = {
-  
+  wallet: window?.localStorage?.getItem('wallet') || ''
 } as UserState;
 
 export const UserContext = createContext<UserState>(InitialState);

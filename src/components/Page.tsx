@@ -10,6 +10,7 @@ import { pusherKey } from "@/lib/constants";
 import PusherEvents from "./PusherEvents";
 import Wallet from "./Pages/Wallet";
 import UserProvider from "@/context/User";
+import Share from "./Pages/Share";
 
 export default function Page() {
   return (
@@ -24,6 +25,9 @@ export default function Page() {
               <Header />
               <main className="overflow-x-hidden">
                 <Switch>
+                  <Route path="/share">
+                    <Share />
+                  </Route>
                   <Route path="/wallet">
                     <Wallet />
                   </Route>

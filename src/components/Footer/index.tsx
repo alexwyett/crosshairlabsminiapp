@@ -14,6 +14,7 @@ export default function Footer() {
         >
           <Button to='/'>{t('home')}</Button>
           <Button to='/wallet'>{t('wallet')}</Button>
+          <Button to='/share'>{t('share')}</Button>
         </div>
       </nav>
     </footer>

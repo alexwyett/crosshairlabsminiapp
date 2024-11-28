@@ -3,7 +3,7 @@ import PageContainer from "../PageContainer";
 
 export default function Home() {
   return (
-    <PageContainer className="!p-0 h-full">
+    <PageContainer className="h-full">
       <LocaleSwitcher />
     </PageContainer>
   )
