@@ -8,6 +8,13 @@ export default function UserReducer(state: UserState, action: UserPayload) {
     }
   }
 
+  if (action.type === UserAction.UPDATE_WALLET) {
+    return {
+      ...state,
+      wallet: action.payload
+    }
+  }
+
   return {
     ...state
   };
