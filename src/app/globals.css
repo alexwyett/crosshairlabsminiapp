@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  @apply outline-sky-600;
+}
+
+
+#app,
+.basic_dialog {
+  height: 100vh;
+  
+  /* grid container settings */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+}
+
+#app,
+.basic_dialog > header {
+  grid-area: header;
+}
+
+#app,
+.basic_dialog > main,
+.basic_dialog > form > fieldset {
+  grid-area: main;
+  overflow: auto;
+}
+
+.basic_dialog > form > button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#app,
+.basic_dialog > footer {
+  grid-area: footer;
+}
